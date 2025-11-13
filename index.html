@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人主页 - Your Name</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+            --text-color: #333;
+            --light-text: #7f8c8d;
+            --background: #ffffff;
+            --card-background: #ffffff;
+            --border-color: #eee;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+            background-color: var(--background);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        /* ==================== 背景图片容器样式设置 ==================== */
+        /* 这是页面顶部的大背景图片区域 */
+        .hero-section {
+            /* 背景区域的高度设置为600像素，数值越大背景图片显示越多 */
+            /* 可以根据需要修改这个值，比如改成500px、700px、800px等 */
+            height: 600px;
+            
+            /* 背景图片的网址设置 */
+            /* 修改说明：将下面url()括号中的网址替换为你想要的图片网址 */
+            /* 示例1：使用网络图片 url('https://example.com/your-image.jpg') */
+            /* 示例2：使用本地图片 url('./images/background.jpg') */
+            background-image: url('https://s21.ax1x.com/2025/11/13/pZCWWmq.jpg');
+            
+            /* 背景图片的缩放方式 - cover表示图片会完全覆盖整个区域 */
+            background-size: cover;
+            
+            /* 背景图片的位置 - center表示图片居中显示 */
+            background-position: center;
+            
+            /* 背景图片不重复显示 */
+            background-repeat: no-repeat;
+            
+            /* 以下是布局相关的设置，一般不需要修改 */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            margin-bottom: 40px;
+        }
+
+        /* 背景图片上的半透明遮罩层 */
+        /* 这个遮罩让文字更清晰可见 */
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            /* 黑色半透明遮罩，最后的0.4表示透明度（0完全透明，1完全不透明） */
+            /* 可以修改0.4这个值来调整遮罩的深浅，比如0.2（更透明）或0.6（更不透明） */
+            background: rgba(0, 0, 0, 0.4);
+        }
+
+        /* 背景图片上显示的文字内容区域 */
+        .hero-content {
+            position: relative;
+            text-align: center;  /* 文字居中显示 */
+            color: white;        /* 文字颜色为白色 */
+            z-index: 2;          /* 确保文字显示在遮罩层上方 */
+            padding: 20px;
+            /* 向上移动文字区域 */
+            margin-top: -80px;
+        }
+
+        /* 背景区域的大标题样式（您的姓名） */
+        .hero-content h1 {
+            font-size: 3.5rem;   /* 字体大小，增大到3.5rem约等于56像素 */
+            font-weight: 400;    /* 字体粗细，400表示正常 */
+            margin-bottom: 10px; /* 下方间距 */
+            /* 使用行楷风格的艺术字体 */
+            /* 优先使用楷体系列字体，营造书法艺术效果 */
+            font-family: 'KaiTi', '楷体', 'STKaiti', '华文楷体', 'FZKai-Z03S', cursive, serif;
+            /* 添加文字描边效果，让字体更有艺术感 */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            /* 字间距调整，让字体更加舒展 */
+            letter-spacing: 8px;
+        }
+
+        /* 背景区域的副标题样式（您的职位描述） */
+        .hero-content p {
+            font-size: 1.2rem;   /* 字体大小，1.2rem约等于19像素 */
+            font-weight: 300;    /* 字体粗细 */
+        }
+
+        /* 主容器区域 */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px 40px;
+            /* 向上移动容器到背景图一半的位置 */
+            /* 背景高度是600px，一半是300px，所以设置为-300px */
+            /* 可以调整这个值来控制向上移动的距离，比如-250px, -300px, -350px等 */
+            margin-top: -300px;
+            position: relative;
+            z-index: 10; /* 确保卡片显示在背景图片上方 */
+        }
+
+        /* ==================== 个人信息卡片样式 ==================== */
+        .profile-card {
+            /* 卡片背景颜色 */
+            background: var(--card-background);
+            /* 圆角边框 */
+            border-radius: 12px;
+            /* 阴影效果，让卡片看起来浮在背景上 */
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            /* 内边距 */
+            padding: 40px;
+            /* 下方间距 */
+            margin-bottom: 40px;
+            /* 文字居中 */
+            text-align: center;
+            /* 过渡动画效果 */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .profile-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+        }
+
+        .avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            display: block;
+            object-fit: cover;
+            border: 3px solid var(--border-color);
+        }
+
+        .name {
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 5px;
+            color: var(--primary-color);
+        }
+
+        .pronouns {
+            font-size: 1rem;
+            color: var(--light-text);
+            margin-bottom: 15px;
+        }
+
+        .motto {
+            font-size: 1.1rem;
+            color: var(--light-text);
+            font-style: italic;
+            margin-bottom: 25px;
+        }
+
+        /* 个人简介区域 */
+        .personal-intro {
+            font-size: 1.1rem;
+            color: var(--text-color);
+            margin-bottom: 30px;
+            line-height: 1.8;
+            text-align: center;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 10px;
+        }
+
+        /* 联系方式区域 */
+        .contact-section {
+            margin-top: 30px;
+        }
+
+        .contact-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+        }
+
+        .contact-links {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .contact-links li {
+            margin: 0;
+        }
+
+        .contact-links a {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: var(--light-text);
+            font-size: 0.9rem;
+            padding: 8px 15px;
+            border-radius: 20px;
+            background: #f8f9fa;
+            transition: all 0.3s ease;
+        }
+
+        .contact-links a:hover {
+            background: var(--secondary-color);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .contact-links a::before {
+            content: "📧";
+            margin-right: 8px;
+            font-size: 14px;
+        }
+
+        .contact-links a[href*="github"]::before { content: " "; }
+
+        /* 主要内容区域 */
+        .main-content {
+            background: var(--card-background);
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            padding: 40px;
+        }
+
+        /* 导航栏 */
+        .nav-bar {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--border-color);
+            flex-wrap: wrap;
+        }
+
+        .nav-bar a {
+            text-decoration: none;
+            color: var(--light-text);
+            font-size: 1rem;
+            font-weight: 500;
+            padding: 10px 20px;
+            border-radius: 30px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-bar a:hover, .nav-bar a.active {
+            background-color: var(--secondary-color);
+            color: white;
+        }
+
+        /* 内容区块 */
+        .section {
+            margin-bottom: 50px;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-bottom: 30px;
+            color: var(--primary-color);
+            text-align: center;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: "";
+            display: block;
+            width: 50px;
+            height: 3px;
+            background: var(--secondary-color);
+            margin: 10px auto 0;
+            border-radius: 3px;
+        }
+
+        /* News部分 */
+        .news-list {
+            list-style: none;
+        }
+
+        .news-list li {
+            margin-bottom: 15px;
+            padding: 15px 20px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            position: relative;
+            padding-left: 30px;
+            transition: all 0.3s ease;
+        }
+
+        .news-list li:hover {
+            background: #edf7ff;
+            transform: translateX(5px);
+        }
+
+        .news-list li::before {
+            content: "•";
+            position: absolute;
+            left: 15px;
+            color: var(--secondary-color);
+            font-size: 24px;
+            top: 8px;
+        }
+
+        /* Experience部分 */
+        .experience-list {
+            display: grid;
+            gap: 25px;
+        }
+
+        .experience-item {
+            display: flex;
+            gap: 20px;
+            padding: 25px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .experience-item:hover {
+            background: white;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            transform: translateY(-3px);
+        }
+
+        .experience-logo {
+            width: 50px;
+            height: 50px;
+            border-radius: 10px;
+            object-fit: cover;
+            flex-shrink: 0;
+            background: var(--secondary-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            color: white;
+        }
+
+        .experience-content {
+            flex: 1;
+        }
+
+        .experience-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-bottom: 5px;
+        }
+
+        .experience-org {
+            font-size: 1rem;
+            color: var(--secondary-color);
+            font-weight: 500;
+            margin-bottom: 5px;
+        }
+
+        .experience-date {
+            font-size: 0.9rem;
+            color: var(--light-text);
+            margin-bottom: 10px;
+        }
+
+        .experience-desc {
+            font-size: 0.95rem;
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        /* ==================== 响应式设计 ==================== */
+        /* 当屏幕宽度小于768像素时（手机端），自动调整样式 */
+        @media (max-width: 768px) {
+            /* 在手机上，背景区域高度调整为400像素 */
+            .hero-section {
+                height: 400px;
+            }
+            
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+            
+            .hero-content p {
+                font-size: 1rem;
+            }
+            
+            .profile-card, .main-content {
+                padding: 25px;
+            }
+            
+            .name {
+                font-size: 1.8rem;
+            }
+            
+            .contact-links {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .experience-item {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 背景图片区域 -->
+    <div class="hero-section" id="heroSection">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Kyire Zhang</h1>
+            <p> </p><!--这里以后可以填自己的概括：eg.计算机视觉领域工作者-->
+        </div>
+    </div>
+
+     <div class="container">
+        <!-- 个人信息卡片 -->
+        <div class="profile-card">
+            <!-- 头像 URL -->
+            <img src="https://s21.ax1x.com/2025/11/13/pZCfu9g.jpg" alt="Avatar" class="avatar">
+            
+            <!-- 姓名 -->
+            <h1 class="name">Kyrie Zhang</h1>
+            
+            <!-- 昵称 -->
+            <div class="nickname">Kyrie329</h1>
+
+            <!-- 性别 -->
+            <div class="pronouns">He/Him</div>
+
+            <!-- 座右铭-->
+            <div class="motto">Stalwart as the mount</div>
+            
+            <!-- 个人简介 - 替换为你的简介 -->
+            <div class="personal-intro">
+                I'm currently an undergraduate(2025-2029) at Xidian University, majoring in Computer class(intelligence).    
+            </div>
+            
+            <!-- 联系方式区域 -->
+            <div class="contact-section">
+                <h3 class="contact-title">Contact-Information</h3>
+                <ul class="contact-links">
+                    <li><a href="mailto:kyrie_zhang0424@163.com">Email(main)</a></li>
+                    <li><a href="mailto:zj.kyrie.zhang@gmail.com">Email(standby)</a></li>
+                    <li><a href="https://github.com/KyrieZhang329" target="_blank">Github</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 主内容区 -->
+        <main class="main-content">
+            <!-- 导航栏 -->
+            <!--
+                <nav class="nav-bar">
+                <a href="#publications" class="active">Publications</a>
+                <a href="#cv">CV-En</a>
+                <a href="#blogs">Blogs</a>
+                <a href="#slide">Slide</a>
+                <a href="#demos">Demos</a>
+            </nav>
+            -->
+
+            <!-- News部分 -->
+            <!--
+            <section class="section" id="news">
+                <h2 class="section-title">News</h2>
+                <ul class="news-list">
+                    <li>新闻内容</li>
+
+                </ul>
+            </section>
+            -->
+            <!-- Experience部分 -->
+            <section class="section" id="experience">
+                <h2 class="section-title">Experience</h2>
+                
+                <div class="experience-list">
+                    <!-- 经历项1 - 复制此结构添加更多经历 -->
+                    <div class="experience-item">
+                        <div class="experience-logo">🎓</div>
+                        <div class="experience-content">
+                            <div class="experience-title">Undergraduate</div>
+                            <div class="experience-org">Xidian University</div>
+                            <div class="experience-date">Sep. 2025 - Now</div>
+                            <div class="experience-desc"> </div>
+                        </div>
+                    </div>
+
+                    <!-- 经历项2 -->
+                    <div class="experience-item">
+                        <div class="experience-logo">🏢</div>
+                        <div class="experience-content">
+                            <div class="experience-title">High school student</div>
+                            <div class="experience-org">The High School Affliiated to SUSTech</div>
+                            <div class="experience-date">Sep. 2022 - Jun. 2025</div>
+                            <div class="experience-desc">Student Union president.</div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script>
+        // 平滑滚动
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    
+                    // 更新导航激活状态
+                    document.querySelectorAll('.nav-bar a').forEach(link => {
+                        link.classList.remove('active');
+                    });
+                    this.classList.add('active');
+                }
+            });
+        });
+
+        // 滚动时更新导航激活状态
+        window.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('.section');
+            const navLinks = document.querySelectorAll('.nav-bar a');
+            
+            let current = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (window.pageYOffset >= (sectionTop - 200)) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').substring(1) === current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
