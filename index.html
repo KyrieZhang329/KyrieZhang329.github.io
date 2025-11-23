@@ -420,7 +420,7 @@
         /* 顶部导航栏容器移动端滑动样式 */
         nav[style*="position: fixed"] > div {
             overflow: auto;
-            -webkit-overflow-scrolling: touch; /* iOS平滑滑动 */
+            -webkit-overflow-scrolling: touch; 
         }
 
         nav[style*="position: fixed"] > div::-webkit-scrollbar {
@@ -505,7 +505,6 @@
         }
         
         @media (max-width: 900px) {
-            /* 移动端隐藏页面标题 */
             .page-title {
                 display: none;
             }
@@ -525,7 +524,6 @@
                 margin-left: 0;
             }
 
-            /* 移动端欢迎语移到个人信息上方 */
             .welcome-banner {
                 order: -1;
             }
@@ -539,11 +537,10 @@
                 border-bottom: 1px solid #eee;
                 flex-wrap: nowrap;
                 overflow-x: auto;
-                -webkit-overflow-scrolling: touch; /* iOS平滑滑动 */
-                scroll-behavior: smooth; /* 平滑滚动 */
+                -webkit-overflow-scrolling: touch; 
+                scroll-behavior: smooth; 
             }
 
-            /* 隐藏滚动条但保持可滑动 */
             .nav-bar::-webkit-scrollbar {
                 display: none;
             }
@@ -552,7 +549,6 @@
                 scrollbar-width: none;
             }
 
-            /* 导航项防止压缩 */
             .nav-bar a {
                 white-space: nowrap;
                 flex-shrink: 0;
@@ -616,7 +612,7 @@
                         <a href="mailto:zj_kyrie_work@163.com" class="contact-link">
                             <i>📧</i> Email(main/domestic)
                         </a>
-                        <a href="mailto:zj.kyrie.zhang@gmail.com" class="contact-link">
+                        <a href="mailto:zjZhang0424@gmail.com" class="contact-link">
                             <i>📧</i> Email(standby/international)
                         </a>
                         <a href="https://github.com/KyrieZhang329" class="contact-link" target="_blank">
@@ -821,3 +817,4 @@
 
 
 </html>
+
