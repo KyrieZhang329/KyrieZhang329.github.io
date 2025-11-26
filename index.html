@@ -265,13 +265,13 @@
             top: 8px;
         }
 
-        /* Experience部分 */
-        .experience-list {
+        /* Experience和Education通用样式 */
+        .experience-list, .education-list {
             display: grid;
             gap: 0;
         }
 
-        .experience-item {
+        .experience-item, .education-item {
             display: flex;
             gap: 0;
             padding: 0;
@@ -283,19 +283,19 @@
             border-bottom: 1px solid #eee;
         }
 
-        .experience-item:last-child {
+        .experience-item:last-child, .education-item:last-child {
             margin-bottom: 0;
             padding-bottom: 0;
             border-bottom: none;
         }
 
-        .experience-item:hover {
+        .experience-item:hover, .education-item:hover {
             background: transparent;
             box-shadow: none;
             transform: none;
         }
 
-        .experience-logo {
+        .experience-logo, .education-logo {
             width: 40px;
             height: 40px;
             border-radius: 6px;
@@ -311,26 +311,26 @@
             border: 1px solid #eee;
         }
 
-        .experience-content {
+        .experience-content, .education-content {
             flex: 1;
         }
 
-        .experience-title {
+        .experience-title, .education-title {
             font-size: 18px;
             font-weight: bold;
             color: #333;
             margin-bottom: 3px;
         }
 
-        .experience-org {
+        .experience-org, .education-org {
             font-size: 15px;
             color: #555;
             font-weight: 500;
             margin-bottom: 5px;
         }
 
-        /* 经历组织链接样式 */
-        .experience-org a {
+        /* 链接样式 */
+        .experience-org a, .education-org a {
             color: #3498db;
             text-decoration: none;
             cursor: pointer;
@@ -338,19 +338,19 @@
             border-bottom: 1px solid transparent;
         }
 
-        .experience-org a:hover {
+        .experience-org a:hover, .education-org a:hover {
             color: #2980b9;
             border-bottom: 1px solid #3498db;
         }
 
-        .experience-date {
+        .experience-date, .education-date {
             font-size: 14px;
             color: #777;
             margin-bottom: 8px;
             display: block;
         }
 
-        .experience-desc {
+        .experience-desc, .education-desc {
             font-size: 14px;
             color: #555;
             line-height: 1.6;
@@ -522,6 +522,11 @@
             .page-title {
                 display: none;
             }
+
+            nav[style*="position: fixed"] > div {
+                padding-left: 0 !important;
+                justify-content: center !important;
+            }
             
             .container {
                 flex-direction: column;
@@ -583,12 +588,13 @@
 
     <!-- 顶部导航栏 -->
     <nav style="position: fixed; top: 0; width: 100%; background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(10px); z-index: 100; padding: 10px 0; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
-        <div style="max-width: 1000px; margin: 0 auto; display: flex; justify-content: center; gap: 30px;">
+        <div style="max-width: 1000px; margin: 0 auto; display: flex; justify-content: center; gap: 30px; padding-left: 150px;">
             <a href="#" class="top-nav-link">Home</a>
             <a href="#about" class="top-nav-link">About Me</a>
-            <a href="#experience" class="top-nav-link">Experience</a>
+            <a href="#education" class="top-nav-link">Education</a>
             <a href="#projects" class="top-nav-link">Projects</a>
             <a href="#publications" class="top-nav-link">Publications</a>
+            <a href="#experience" class="top-nav-link">Experience</a>
         </div>
     </nav>
 
@@ -649,14 +655,15 @@
                 <!-- 导航栏 -->
                 <nav class="nav-bar">
                     <a href="#about" class="active">About Me</a>
-                    <a href="#experience">Experience</a>
+                    <a href="#education">Education</a>
                     <a href="#projects">Projects</a>
                     <a href="#publications">Publications</a>
+                    <a href="#experience">Experience</a>
                 </nav>
 
                 <!-- 欢迎语 -->
                 <div class="welcome-banner">
-                    <h2>Welcome to my homepage</h2>
+                    <h2>Welcome to Kyrie's homepage</h2>
                 </div>
 
                 <!-- About Me 部分 -->
@@ -668,40 +675,40 @@
                     </div>
                 </section>
 
-                <!-- Experience部分 -->
-            <section class="section" id="experience">
-                <h2 class="section-title">Experience</h2>
+                <!-- Education部分 -->
+            <section class="section" id="education">
+                <h2 class="section-title">Education</h2>
                 
-                <div class="experience-list">
-                    <!-- 经历项1 -->
-                    <div class="experience-item">
-                        <div class="experience-logo">🎓</div>
-                        <div class="experience-content">
-                            <h3 class="experience-title">Undergraduate</h3>
-                            <div class="experience-org">Xidian University</div>
-                            <span class="experience-date">2025.9 - Now</span>
+                <div class="education-list">
+                    <!-- education项1 -->
+                    <div class="education-item">
+                        <img src="https://s21.ax1x.com/2025/11/26/pZAWDxO.png" alt="XDU Logo" class="education-logo" style="width: 40px; height: 40px; border-radius: 6px; object-fit: cover; flex-shrink: 0; background: #f5f5f5; display: block; border: 1px solid #eee;">
+                        <div class="education-content">
+                            <h3 class="education-title">Undergraduate</h3>
+                            <div class="education-org">Xidian University</div>
+                            <span class="education-date">2025.9 - Now</span>
                         </div>
                     </div>
                     
-                    <!-- 经历项2 -->
-                    <div class="experience-item">
-                        <div class="experience-logo">🎓</div>
-                        <div class="experience-content">
-                            <h3 class="experience-title">High school student</h3>
-                            <div class="experience-org"><a href="https://www.hsas.edu.cn/#/" target="_blank">The High School Affliated to SUSTech</a></div>
-                            <span class="experience-date">2022.9 - 2025.6</span>
-                            <div class="experience-desc">Student Union president.</div>
+                    <!-- education项2 -->
+                    <div class="education-item">
+                        <img src="https://s21.ax1x.com/2025/11/26/pZAWwPx.png" alt="HSAS Logo" class="education-logo" style="width: 40px; height: 40px; border-radius: 6px; object-fit: cover; flex-shrink: 0; background: #f5f5f5; display: block; border: 1px solid #eee;">
+                        <div class="education-content">
+                            <h3 class="education-title">High school student</h3>
+                            <div class="education-org"><a href="https://www.hsas.edu.cn/#/" target="_blank">The High School Affliated to SUSTech</a></div>
+                            <span class="education-date">2022.9 - 2025.6</span>
+                            <div class="education-desc">Student Union president.</div>
                         </div>
                     </div>
 
-                    <!-- 经历项3 (模板) 
-                    <div class="experience-item">
-                        <div class="experience-logo">🎊</div>
-                        <div class="experience-content">
-                            <h3 class="experience-title">Your Experience Title</h3>
-                            <div class="experience-org">Organization/Company Name</div>
-                            <span class="experience-date">Start Date - End Date</span>
-                            <div class="experience-desc">Description of your experience.</div>
+                    <!-- education项3 (模板) 
+                    <div class="education-item">
+                        <img src="图片地址" alt="School Logo" class="education-logo" style="width: 40px; height: 40px; border-radius: 6px; object-fit: cover; flex-shrink: 0; background: #f5f5f5; display: block; border: 1px solid #eee;">
+                        <div class="education-content">
+                            <h3 class="education-title">Your Education Title</h3>
+                            <div class="education-org">School/University Name</div>
+                            <span class="education-date">Start Date - End Date</span>
+                            <div class="education-desc">Description of your education.</div>
                         </div>
                     </div>
                     -->
@@ -724,7 +731,7 @@
                         </div>
                     </div>
 
-                    <!-- 项目2 (模板) 
+                    <!-- 项目2 (模板)
                     <div class="experience-item">
                         <div class="experience-logo">📚</div>
                         <div class="experience-content">
@@ -744,6 +751,47 @@
             <div class="publications-content">
                 <p>No formal publications yet.</p>
             </div>
+            </section>
+
+            <!-- Experience部分 -->
+            <section class="section" id="experience">
+                <h2 class="section-title">Experience</h2>
+                
+                <div class="experience-list">
+                    <!-- 经历项1：Asian Youth Chinese Forum -->
+                    <div class="experience-item">
+                        <div class="experience-logo">🌏</div>
+                        <div class="experience-content">
+                            <h3 class="experience-title">Asian Youth Chinese Forum</h3>
+                            <div class="experience-org">Singapore</div>
+                            <span class="experience-date">2024.7</span>
+                            <div class="experience-desc">Participated as a delegate in the Asian Youth Chinese Forum.</div>
+                        </div>
+                    </div>
+                    
+                    <!-- 经历项2：HCI-HSAS Computing Forum -->
+                    <div class="experience-item">
+                        <div class="experience-logo">🎤</div>
+                        <div class="experience-content">
+                            <h3 class="experience-title">HCI-HSAS Computing Forum</h3>
+                            <div class="experience-org">Shenzhen, China</div>
+                            <span class="experience-date">2023.11</span>
+                            <div class="experience-desc">Served as a speaker presenting at the HCI-HSAS Computing Forum.</div>
+                        </div>
+                    </div>
+
+                    <!-- 经历项3 (模板)
+                    <div class="experience-item">
+                        <div class="experience-logo">🎯</div>
+                        <div class="experience-content">
+                            <h3 class="experience-title">Your experience Title</h3>
+                            <div class="experience-org">Organization/Location</div>
+                            <span class="experience-date">YYYY.MM</span>
+                            <div class="experience-desc">Description of your experience.</div>
+                        </div>
+                    </div>
+                    -->
+                </div>
             </section>
         </main>
     </div>
