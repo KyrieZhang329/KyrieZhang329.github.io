@@ -31,15 +31,13 @@
             font-size: 16px;
         }
 
-
-
         /* 主容器区域 */
         .container {
             display: flex;
             max-width: 1200px;
             margin: 0 auto;
             padding: 40px 20px;
-            margin-top: 60px; /* 为顶部导航栏预留空间 */
+            margin-top: 60px;
         }
 
         /* 左侧个人信息区域 - sticky 固定位置 */
@@ -50,7 +48,7 @@
             border-radius: 5px;
             box-shadow: 0 1px 3px rgba(0,0,0,0.1);
             position: sticky;
-            top: 80px; /* 为顶部导航栏预留空间 */
+            top: 80px;
             margin-right: 30px;
             flex-shrink: 0;
         }
@@ -60,7 +58,7 @@
             flex: 1;
         }
 
-        /* ==================== 个人信息卡片样式 ==================== */
+        /* 个人信息卡片样式 */
         .profile-card {
             padding: 0;
             background: transparent;
@@ -95,13 +93,6 @@
             color: var(--primary-color);
         }
 
-        .pronouns {
-            text-align: center;
-            font-size: 14px;
-            color: #666;
-            margin-bottom: 20px;
-        }
-        
         /* 中文姓名样式 */
         .chinese-name {
             font-size: 18px;
@@ -129,18 +120,6 @@
             border-bottom: 1px solid #eee;
         }
 
-        /* 个人简介区域 */
-        .personal-intro {
-            text-align: center;
-            margin: 20px 0;
-            font-size: 14px;
-            line-height: 1.7;
-            color: #555;
-            padding: 0;
-            background: transparent;
-            border-radius: 0;
-        }
-
         /* 联系方式区域 */
         .contact-section {
             margin-top: 25px;
@@ -160,10 +139,6 @@
             flex-direction: column;
             gap: 10px;
             padding: 0;
-            margin: 0;
-        }
-
-        .contact-links li {
             margin: 0;
         }
 
@@ -234,35 +209,6 @@
 
         .section-title::after {
             display: none;
-        }
-
-        /* News部分 */
-        .news-list {
-            list-style: none;
-        }
-
-        .news-list li {
-            margin-bottom: 15px;
-            padding: 15px 20px;
-            background: #f8f9fa;
-            border-radius: 8px;
-            position: relative;
-            padding-left: 30px;
-            transition: all 0.3s ease;
-        }
-
-        .news-list li:hover {
-            background: #edf7ff;
-            transform: translateX(5px);
-        }
-
-        .news-list li::before {
-            content: "•";
-            position: absolute;
-            left: 15px;
-            color: var(--secondary-color);
-            font-size: 24px;
-            top: 8px;
         }
 
         /* Experience和Education通用样式 */
@@ -356,7 +302,7 @@
             line-height: 1.6;
         }
 
-        /* 论文/项目展示样式 */
+        /* 项目展示样式 */
         .paper-box {
             display: flex;
             justify-content: flex-start;
@@ -405,14 +351,6 @@
             padding: 30px 10px;
             color: #777;
             font-size: 16px;
-        }
-
-        /* 页脚 */
-        .footer {
-            text-align: center;
-            margin-top: 20px;
-            color: #777;
-            font-size: 14px;
         }
 
         /* 顶部导航栏链接样式 */
@@ -623,9 +561,6 @@
                 
                 <!-- 座右铭 -->
                 <div class="motto">Stalwart as the mount</div>
-                
-                <!-- 个人简介 -->
-                <!-- 已移至About Me部分 -->
                 
                 <!-- 联系方式区域 -->
                 <div class="contact-section">
