@@ -40,22 +40,26 @@
             margin-top: 60px;
         }
 
-        /* 左侧个人信息区域 - sticky 固定位置 */
+        /* 左侧个人信息区域 - 固定位置 */
         .sidebar {
-            width: 280px;
-            padding: 30px;
+            width: 240px;
+            padding: 20px 15px;
             background-color: #fff;
             border-radius: 5px;
             box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-            position: sticky;
+            position: fixed;
             top: 80px;
-            margin-right: 30px;
+            left: 20px;
+            height: calc(100vh - 100px);
+            overflow-y: auto;
+            z-index: 50;
             flex-shrink: 0;
         }
 
         /* 右侧主要内容区域 */
         .main-content-wrapper {
             flex: 1;
+            margin-left: 300px;
         }
 
         /* 个人信息卡片样式 */
@@ -77,67 +81,72 @@
         }
 
         .avatar {
-            width: 160px;
-            height: 160px;
+            width: 120px;
+            height: 120px;
             border-radius: 50%;
-            margin: 0 auto 20px;
+            margin: 0 auto 15px;
             display: block;
             object-fit: cover;
             border: 1px solid #eee;
         }
 
         .name {
-            font-size: 24px;
+            font-size: 18px;
             font-weight: bold;
-            margin-bottom: 5px;
+            margin-bottom: 3px;
             color: var(--primary-color);
+            text-align: center;
         }
 
         /* 中文姓名样式 */
         .chinese-name {
-            font-size: 18px;
+            font-size: 14px;
             text-align: center;
-            color: #666;
-            margin-bottom: 10px;
+            color: #999;
+            margin-bottom: 8px;
         }
         
         /* 昵称样式 */
         .nickname {
-            font-size: 16px;
+            font-size: 13px;
             text-align: center;
-            color: #666;
-            margin-bottom: 15px;
+            color: #999;
+            margin-bottom: 10px;
         }
 
         .motto {
             font-style: italic;
             text-align: center;
-            font-size: 16px;
-            margin: 20px 0;
-            color: #555;
-            padding: 10px 0;
-            border-top: 1px solid #eee;
-            border-bottom: 1px solid #eee;
+            font-size: 13px;
+            margin: 10px 0;
+            color: #999;
+            padding: 8px 0;
+            border-top: none;
+            border-bottom: none;
+        }
+
+        /* 性别样式 */
+        .gender {
+            font-size: 11px;
+            text-align: center;
+            color: #999;
+            margin-bottom: 8px;
         }
 
         /* 联系方式区域 */
         .contact-section {
-            margin-top: 25px;
+            margin-top: 15px;
         }
 
         .contact-title {
-            text-align: center;
-            font-weight: bold;
-            margin-bottom: 15px;
-            font-size: 16px;
-            color: #333;
+            display: none;
         }
 
         .contact-links {
             list-style: none;
             display: flex;
             flex-direction: column;
-            gap: 10px;
+            gap: 8px;
             padding: 0;
             margin: 0;
         }
@@ -145,25 +154,26 @@
         .contact-links a {
             display: flex;
             align-items: center;
-            justify-content: center;
-            padding: 8px 15px;
-            background-color: #f8f8f8;
-            border-radius: 4px;
-            color: #333;
+            justify-content: flex-start;
+            padding: 0;
+            background-color: transparent;
+            border-radius: 0;
+            color: #666;
             text-decoration: none;
-            font-size: 14px;
-            transition: background-color 0.2s;
+            font-size: 13px;
+            transition: color 0.2s;
         }
 
         .contact-links a:hover {
-            background-color: #f0f0f0;
+            background-color: transparent;
             text-decoration: none;
+            color: #3498db;
         }
 
         .contact-links a::before {
             content: "";
             margin-right: 8px;
-            font-size: 16px;
+            font-size: 14px;
         }
 
         /* 主要内容区域 */
@@ -547,6 +557,9 @@
                 margin-bottom: 30px;
                 position: relative;
                 top: 0;
+                left: 0;
+                height: auto;
+                margin-left: 0;
             }
             
             .main-content-wrapper {
