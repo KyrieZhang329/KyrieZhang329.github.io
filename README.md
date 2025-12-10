@@ -1,6 +1,10 @@
-# Personal Homepage - 个人主页
+# Personal Homepage
 
-## 项目结构 / Project Structure
+This website was developed with the assistance of Cursor.    
+
+Contributions and folk are welcome.
+
+##  Project Structure
 
 ```
 my-website/
@@ -8,15 +12,12 @@ my-website/
 ├── README.md               # 项目说明文件
 └── assets/                 # 资源文件夹
     ├── css/                # 存放样式表
-    │   └── style.css       # 从 HTML 中提取出来的 CSS
+    │   └── style.css       #  CSS
     ├── js/                 # 存放脚本
-    │   └── main.js         # 从 HTML 中提取出来的 JS
+    │   └── main.js         #  JS
     └── images/             # 存放图片（本地化）
-        ├── avatar.jpg      # 个人头像
-        ├── xdu-logo.png    # 西电 Logo
-        └── hsas-logo.png   # 高中部 Logo
+        ├── 
+        ├── 
+        └── 
 ```
 
-This website was developed with the assistance of Cursor.  
-
-Contributions and folk are welcome.
