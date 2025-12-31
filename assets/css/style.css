@@ -170,10 +170,12 @@ body {
     color: #3498db;
 }
 
-.contact-links a i {
-    font-size: 16px;
+.contact-links a i,
+.contact-links a img {
     width: 20px;
-    height: 16px;
+    height: 20px;
+    margin-right: 8px;
+    object-fit: contain;
     display: flex;
     align-items: center;
     justify-content: center;
