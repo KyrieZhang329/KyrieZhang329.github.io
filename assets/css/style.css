@@ -579,7 +579,7 @@ nav[style*="position: fixed"] > div {
     padding: 20px;
     background-color: #f8f9fa;
     border-radius: 4px;
-    min-height: 150px;
+    min-height: 200px;
     border-left: 4px solid var(--secondary-color);
 }
 
