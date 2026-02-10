@@ -583,6 +583,14 @@ nav[style*="position: fixed"] > div {
     border-left: 4px solid var(--secondary-color);
 }
 
+.update-time {
+    text-align: center;
+    padding: 20px;
+    color: #777;
+    font-size: 14px;
+    margin-top: 20px;
+}
+
 @media (max-width: 900px) {
     .page-title {
         display: none;
