@@ -1,6 +1,6 @@
 # Personal Homepage
 
-This website was developed with the assistance of Codex.    
+This website was developed with the assistance of Cursor.    
 
 Contributions and folk are welcome.
 
