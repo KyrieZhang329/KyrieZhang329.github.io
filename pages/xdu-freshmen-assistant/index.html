@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Project page for XDU Freshmen Assistant, a local intelligent navigation assistant for Xidian University freshmen."
+    />
+    <title>XDU Freshmen Assistant | Project Page</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <div class="app-frame">
+        <header class="topbar">
+          <a class="back-link" href="../../index.html">Back to Homepage</a>
+
+          <a class="brand" href="#top" aria-label="XDU Freshmen Assistant">
+            <img
+              class="brand-logo"
+              src="../../images/xdu-logo.png"
+              alt="XDU Logo"
+            />
+            <div class="brand-copy">
+              <span class="brand-kicker">Project Page</span>
+              <strong class="brand-title">XDU Freshmen Assistant</strong>
+            </div>
+          </a>
+
+          <a
+            class="code-link"
+            href="https://github.com/KyrieZhang329/XDU-FreshmenAssistant"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            View Code
+          </a>
+        </header>
+
+        <main class="workspace" id="top">
+          <section class="hero-showcase" aria-label="Project cover image">
+            <img
+              class="hero-showcase-image"
+              src="../../images/XDU-Freshmen-Assistant.png"
+              alt="XDU Freshmen Assistant preview"
+            />
+          </section>
+
+          <section class="hero-grid">
+            <div class="hero-copy">
+              <p class="hero-kicker">Spark Cup 2026 | Intelligent Agent Track</p>
+              <h1 class="hero-title">&#35199;&#30005;&#26032;&#29983;&#23398;&#20064;&#23548;&#33322;&#26234;&#33021;&#20307;</h1>
+              <p class="hero-subtitle">
+                XDU-FreshmenAssistant is a locally deployable intelligent Q&amp;A
+                assistant designed for Xidian University freshmen. It focuses on
+                onboarding, course planning, campus resources, competition
+                guidance, and the practical questions that appear in the first
+                semester.
+              </p>
+
+              <div class="hero-actions">
+                <a
+                  class="hero-action hero-action-primary"
+                  href="https://github.com/KyrieZhang329/XDU-FreshmenAssistant"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  [Code]
+                </a>
+                <a class="hero-action" href="./project-proposal.pdf" target="_blank" rel="noopener noreferrer">
+                  [Project Proposal PDF]
+                </a>
+                <a class="hero-action" href="#demo-video">[Demo Video]</a>
+              </div>
+            </div>
+
+            <aside class="summary-stack">
+              <article class="summary-card">
+                <span class="summary-label">Competition Context</span>
+                <strong>2026 XDU Spark Cup (Agent development track)</strong>
+              </article>
+              <article class="summary-card">
+                <span class="summary-label">Target Users</span>
+                <strong>Freshmen at Xidian University</strong>
+              </article>
+              <article class="summary-card">
+                <span class="summary-label">Deployment Form</span>
+                <strong>Local frontend + local backend + structured knowledge base</strong>
+              </article>
+            </aside>
+          </section>
+
+          <section class="section-panel">
+            <div class="section-head">
+              <p class="section-kicker">Project Positioning</p>
+              <h2>What this project solves</h2>
+            </div>
+
+            <div class="feature-grid">
+              <article class="feature-card">
+                <span class="feature-index">01</span>
+                <h3>Freshmen onboarding</h3>
+                <p>
+                  Help new students quickly understand enrollment, courses,
+                  learning resources, organizations, and the first-stage campus
+                  workflow.
+                </p>
+              </article>
+
+              <article class="feature-card">
+                <span class="feature-index">02</span>
+                <h3>Knowledge-guided answering</h3>
+                <p>
+                  Use a structured local knowledge base first, and only extend to
+                  web information when the question is time-sensitive or local
+                  material is insufficient.
+                </p>
+              </article>
+
+              <article class="feature-card">
+                <span class="feature-index">03</span>
+                <h3>Local runnable delivery</h3>
+                <p>
+                  The project is packaged as a locally runnable front-end and
+                  back-end system with one-click startup on Windows.
+                </p>
+              </article>
+            </div>
+          </section>
+
+          <section class="section-panel architecture-panel">
+            <div class="section-head">
+              <p class="section-kicker">System Structure</p>
+              <h2>How the project is organized</h2>
+            </div>
+
+            <div class="architecture-grid">
+              <article class="architecture-card">
+                <h3>Frontend Layer</h3>
+                <p>
+                  A standalone web interface designed for local use. In the
+                  runnable version, it supports text interaction, thinking state,
+                  and progressive output.
+                </p>
+                <ul>
+                  <li>Local static frontend</li>
+                  <li>Separated deployment from backend</li>
+                  <li>Designed for direct use by freshmen</li>
+                </ul>
+              </article>
+
+              <article class="architecture-card">
+                <h3>Backend Layer</h3>
+                <p>
+                  A local backend exposing an OpenAI-compatible endpoint,
+                  primarily via <code>/v1/chat/completions</code>, with CORS
+                  support for front-end/back-end separation.
+                </p>
+                <ul>
+                  <li>Local health check and service entry</li>
+                  <li>Windows-oriented startup scripts</li>
+                  <li>Easy integration with agent backends</li>
+                </ul>
+              </article>
+
+              <article class="architecture-card">
+                <h3>Knowledge Layer</h3>
+                <p>
+                  Standardized knowledge directories separate raw material,
+                  curated content, templates, processed data, and indexes for
+                  later retrieval iteration.
+                </p>
+                <ul>
+                  <li><code>raw</code> source documents</li>
+                  <li><code>curated</code> cleaned knowledge</li>
+                  <li><code>templates</code> and indexes for processing</li>
+                </ul>
+              </article>
+            </div>
+          </section>
+
+          <section class="section-panel delivery-panel">
+            <div class="section-head">
+              <p class="section-kicker">Current Delivery</p>
+              <h2>Implemented highlights from the repository</h2>
+            </div>
+
+            <div class="chip-row">
+              <span class="chip">One-click startup</span>
+              <span class="chip">Windows local deployment</span>
+              <span class="chip">Hybrid retrieval strategy</span>
+              <span class="chip">OpenAI-compatible API</span>
+              <span class="chip">Knowledge-base-first answering</span>
+              <span class="chip">Static resource serving</span>
+            </div>
+
+            <div class="detail-grid">
+              <article class="detail-card">
+                <h3>Run mode</h3>
+                <p>
+                  The repository provides a directly runnable local chat system,
+                  including frontend pages, a local backend, and startup scripts
+                  for Windows.
+                </p>
+              </article>
+
+              <article class="detail-card">
+                <h3>Interaction strategy</h3>
+                <p>
+                  The practical chain prioritizes local knowledge. If the problem
+                  involves strong timeliness or the local material is not enough,
+                  the system can supplement through external information.
+                </p>
+              </article>
+
+              <article class="detail-card">
+                <h3>Project assets</h3>
+                <p>
+                  This page includes the project proposal PDF and a demo video so
+                  the project can be reviewed without running the actual local
+                  system.
+                </p>
+              </article>
+            </div>
+          </section>
+
+          <section class="section-panel media-panel" id="demo-video">
+            <div class="section-head">
+              <p class="section-kicker">Visual Demo</p>
+              <h2>Project demonstration video</h2>
+            </div>
+
+            <div class="media-grid">
+              <div class="video-card">
+                <video
+                  class="demo-video"
+                  controls
+                  preload="metadata"
+                  poster="../../images/XDU-Freshmen-Assistant.png"
+                >
+                  <source src="./demo.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+
+              <aside class="media-note">
+                <h3>How to review</h3>
+                <p>
+                  This page is intentionally presentation-only. It does not expose
+                  the live chat interface. Use the video to review the interaction
+                  flow and use the code repository for implementation details.
+                </p>
+                <div class="media-actions">
+                  <a class="hero-action" href="./demo.mp4" target="_blank" rel="noopener noreferrer">[Open Video]</a>
+                  <a class="hero-action" href="./project-proposal.pdf" target="_blank" rel="noopener noreferrer">[Open Proposal]</a>
+                </div>
+              </aside>
+            </div>
+          </section>
+        </main>
+      </div>
+    </div>
+  </body>
+</html>
