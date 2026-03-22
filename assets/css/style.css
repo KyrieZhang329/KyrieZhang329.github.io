@@ -10,6 +10,7 @@
   --border-color: #e7edf3;
   --shadow: 0 8px 24px rgba(44, 62, 80, 0.07);
   --shadow-soft: 0 4px 14px rgba(44, 62, 80, 0.05);
+  --accent-bar-width: 4px;
 }
 
 * {
@@ -397,7 +398,7 @@ nav[style*="position: fixed"] > div::-webkit-scrollbar {
   padding: 20px 22px;
   background-color: var(--soft-background);
   border-radius: 12px;
-  border-left: 4px solid var(--secondary-color);
+  border-left: var(--accent-bar-width) solid var(--secondary-color);
 }
 
 .about-content p + p {
@@ -423,7 +424,7 @@ nav[style*="position: fixed"] > div::-webkit-scrollbar {
   padding: 20px;
   border-radius: 14px;
   border: 1px solid var(--border-color);
-  border-left: 3px solid var(--secondary-color);
+  border-left: var(--accent-bar-width) solid var(--secondary-color);
   min-width: 0;
   min-height: 138px;
 }
@@ -433,7 +434,7 @@ nav[style*="position: fixed"] > div::-webkit-scrollbar {
   background: var(--soft-background);
   border-radius: 14px;
   border: 1px solid var(--border-color);
-  border-left: 4px solid var(--secondary-color);
+  border-left: var(--accent-bar-width) solid var(--secondary-color);
 }
 
 .education-logo {
@@ -514,7 +515,7 @@ nav[style*="position: fixed"] > div::-webkit-scrollbar {
   align-items: center;
   background: linear-gradient(180deg, #fbfdff 0%, #f6f9fc 100%);
   border: 1px solid var(--border-color);
-  border-left: 3px solid var(--secondary-color);
+  border-left: var(--accent-bar-width) solid var(--secondary-color);
   border-radius: 14px;
   padding: 16px;
 }
@@ -604,6 +605,89 @@ nav[style*="position: fixed"] > div::-webkit-scrollbar {
   border-bottom-color: currentColor;
 }
 
+.reading-notes-intro {
+  margin-bottom: 18px;
+  display: grid;
+  gap: 10px;
+  padding: 2px 2px 0;
+}
+
+.reading-notes-intro p {
+  margin: 0;
+  max-width: 720px;
+  font-size: 15px;
+  line-height: 1.75;
+  color: #5f6d79;
+}
+
+.reading-notes-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.reading-note-item {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  border-left: var(--accent-bar-width) solid var(--secondary-color);
+  background: linear-gradient(180deg, #fbfdff 0%, #f6f9fc 100%);
+}
+
+.reading-note-item::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--secondary-color);
+}
+
+.reading-note-main {
+  min-width: 0;
+}
+
+.reading-note-title {
+  display: block;
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 1.35;
+  color: var(--secondary-color);
+}
+
+.reading-note-meta {
+  display: block;
+  margin-top: 2px;
+  font-size: 14px;
+  line-height: 1.55;
+  color: #5c6874;
+}
+
+.reading-note-status {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 88px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.reading-note-status.is-updating {
+  background: rgba(52, 152, 219, 0.12);
+  color: #2a7db4;
+}
+
+.reading-note-status.is-completed {
+  background: rgba(39, 174, 96, 0.12);
+  color: #23824d;
+}
 .publications-content {
   color: #666;
   font-size: 16px;
@@ -762,6 +846,16 @@ nav[style*="position: fixed"] > div::-webkit-scrollbar {
   .project-title {
     font-size: 20px;
   }
+  .reading-note-item {
+    grid-template-columns: auto minmax(0, 1fr);
+    align-items: start;
+  }
+
+  .reading-note-status {
+    grid-column: 2;
+    justify-self: start;
+    margin-top: 2px;
+  }
 }
 
 @media (max-width: 600px) {
@@ -788,8 +882,20 @@ nav[style*="position: fixed"] > div::-webkit-scrollbar {
     padding: 18px;
     gap: 14px;
   }
-
+  .reading-note-item {
+    padding: 16px;
+  }
   .project-title {
     font-size: 20px;
+  }
+  .reading-note-item {
+    grid-template-columns: auto minmax(0, 1fr);
+    align-items: start;
+  }
+
+  .reading-note-status {
+    grid-column: 2;
+    justify-self: start;
+    margin-top: 2px;
   }
 }
