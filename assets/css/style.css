@@ -421,6 +421,12 @@ nav[style*="position: fixed"] > div::-webkit-scrollbar {
   align-items: stretch;
 }
 
+.experience-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
 .education-item,
 .experience-item {
   display: flex;
@@ -439,11 +445,34 @@ nav[style*="position: fixed"] > div::-webkit-scrollbar {
 }
 
 .experience-item {
+  align-items: center;
   padding: 22px 24px;
   background: var(--soft-background);
   border-radius: 14px;
   border: 1px solid var(--border-color);
   border-left: var(--accent-bar-width) solid var(--secondary-color);
+}
+
+.experience-badge {
+  width: 88px;
+  height: 88px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  border-radius: 18px;
+  border: 1px solid rgba(52, 152, 219, 0.12);
+  background: linear-gradient(180deg, #ffffff 0%, #eef6fc 100%);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8);
+}
+
+.experience-logo {
+  width: 100%;
+  max-width: 64px;
+  height: auto;
+  display: block;
+  object-fit: contain;
 }
 
 .education-logo {
@@ -859,6 +888,17 @@ nav[style*="position: fixed"] > div::-webkit-scrollbar {
 
   .education-list {
     grid-template-columns: 1fr;
+  }
+
+  .experience-item {
+    align-items: flex-start;
+  }
+
+  .experience-badge {
+    width: 80px;
+    height: 80px;
+    padding: 9px;
+    border-radius: 16px;
   }
 
   .project-item {
