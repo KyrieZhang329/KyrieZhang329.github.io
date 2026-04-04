@@ -1,0 +1,460 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="西电新生学习导航智能助手项目展示页，面向西安电子科技大学新生的校园智能问答项目。"
+    />
+    <title>西电新生学习导航智能助手 | 项目展示页</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <nav class="language-rail" aria-label="语言切换">
+        <a class="language-switch" href="./index.html">English</a>
+        <a class="language-switch is-active" href="./index-zh.html" aria-current="page">
+          中文
+        </a>
+      </nav>
+
+      <div class="page-content">
+        <header class="topbar">
+          <a class="top-link" href="../../index.html">返回主页</a>
+
+          <a class="brand" href="#top" aria-label="西电新生学习导航智能助手">
+            <img
+              class="brand-logo"
+              src="../../images/xdu-logo.png"
+              alt="XDU Logo"
+            />
+            <div class="brand-copy">
+              <span class="brand-kicker">项目展示页</span>
+              <strong class="brand-title">西电新生学习导航智能助手</strong>
+            </div>
+          </a>
+        </header>
+
+        <main class="page-main" id="top">
+          <section class="hero-section">
+            <div class="hero-copy">
+              <p class="eyebrow">2026 西电星火杯智能体开发专项赛参赛项目</p>
+              <h1 class="hero-title">西电新生学习导航智能助手</h1>
+              <p class="hero-subtitle">
+                面向西安电子科技大学新生的校园智能问答项目
+              </p>
+              <p class="hero-text">
+                项目已完成本地原型开发并上线云端首发版本。当前只需要通过浏览器访问一个网页，
+                就可以直接与智能体进行对话和文档问答。系统主要覆盖入学适应、学习规划、竞赛入门、
+                校园资源使用和常见事务流程查询等高频场景。
+              </p>
+
+              <div class="hero-metrics" aria-label="项目概览">
+                <article class="hero-metric">
+                  <span class="hero-metric-label">面向对象</span>
+                  <strong>西电新生用户</strong>
+                </article>
+                <article class="hero-metric">
+                  <span class="hero-metric-label">发布状态</span>
+                  <strong>云端首发版本已上线</strong>
+                </article>
+                <article class="hero-metric">
+                  <span class="hero-metric-label">当前能力</span>
+                  <strong>文本问答 + 附件文字问答</strong>
+                </article>
+              </div>
+
+              <div class="hero-actions">
+                <a class="hero-action hero-action-primary" href="#demo-section">
+                  查看 Demo
+                </a>
+                <a class="hero-action" href="#status-section">当前状态</a>
+                <a
+                  class="hero-action"
+                  href="./project-proposal.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  查看计划书
+                </a>
+              </div>
+            </div>
+
+            <div class="hero-visual">
+              <div class="hero-image-frame">
+                <img
+                  class="hero-image"
+                  src="../../images/XDU-Freshmen-Assistant.png"
+                  alt="西电新生学习导航智能助手预览图"
+                />
+              </div>
+
+              <div class="hero-facts">
+                <article class="hero-fact-card">
+                  <span>前端线上地址</span>
+                  <strong><code>chat.xduassistant.cloud</code></strong>
+                </article>
+                <article class="hero-fact-card">
+                  <span>后端API</span>
+                  <strong><code>api.xduassistant.cloud</code></strong>
+                </article>
+              </div>
+            </div>
+          </section>
+
+          <section class="content-section">
+            <div class="section-heading">
+              <p class="eyebrow">项目背景</p>
+              <h2>项目需求</h2>
+            </div>
+
+            <div class="background-grid">
+              <p class="section-text">
+                项目面向西安电子科技大学新生，对于新生来说，核心问题不是信息完全缺失，
+                而是校园信息分散在学院通知、QQ群、教务页面、经验帖和零散文档里。
+                新生往往需要在短时间内同时处理入学适应、学习规划、竞赛入门、
+                资源入口和事务流程等问题，因此需要一个能够直接对话、
+                优先结合校园资料给出回答的统一入口。
+              </p>
+
+              <ul class="pain-grid">
+                <li>入学适应阶段信息来源分散，难以快速判断先看什么、先做什么</li>
+                <li>培养方案、课程安排和学习规划理解门槛较高，缺少统一解释入口</li>
+                <li>竞赛方向较多，但新生缺少适合入门的筛选与导航支持</li>
+                <li>图书馆、请销假、奖助政策等校园资源与事务流程查询成本较高</li>
+              </ul>
+            </div>
+          </section>
+
+          <section class="content-section">
+            <div class="section-heading">
+              <p class="eyebrow">功能概述</p>
+              <h2>核心功能</h2>
+            </div>
+
+            <p class="section-intro">
+              当前版本已经完成线上首发，前端、后端、知识库和基础工程化链路均已打通
+            </p>
+
+            <div class="feature-grid">
+              <article class="feature-card">
+                <span class="card-kicker">当前功能</span>
+                <h3>文本智能问答</h3>
+                <p>
+                  用户可以直接输入问题获取回答，当前主要覆盖入学适应、学习规划、
+                  竞赛入门、校园资源使用和常见事务流程查询等场景
+                </p>
+              </article>
+
+              <article class="feature-card">
+                <span class="card-kicker">当前功能</span>
+                <h3>对话交互能力</h3>
+                <p>
+                  支持新对话重置、首页快捷提问卡片和更自然的逐字输出，
+                  减少上下文串扰并优化基础对话体验
+                </p>
+              </article>
+
+              <article class="feature-card">
+                <span class="card-kicker">当前功能</span>
+                <h3>Markdown 渲染展示</h3>
+                <p>
+                  回答区支持标题、列表、代码块、表格等 Markdown 内容展示，
+                  便于承载更长、更结构化的说明结果
+                </p>
+              </article>
+
+              <article class="feature-card">
+                <span class="card-kicker">当前功能</span>
+                <h3>附件文字问答</h3>
+                <p>
+                  支持上传 PDF、DOCX、XLSX、PPTX、TXT 等常见文档，
+                  先提取文字内容，再围绕附件内容继续提问
+                </p>
+              </article>
+
+              <article class="feature-card">
+                <span class="card-kicker">当前功能</span>
+                <h3>本地知识增强</h3>
+                <p>
+                  后端采用“本地知识优先 + 外部能力补充”的问答策略，
+                  先基于本地知识库检索和摘要，再结合 Coze 能力生成最终回答
+                </p>
+              </article>
+
+              <article class="feature-card">
+                <span class="card-kicker">当前功能</span>
+                <h3>来源类型提示</h3>
+                <p>
+                  回答区保留来源类型提示，例如“依据：图书馆公开服务说明”。
+                </p>
+              </article>
+            </div>
+          </section>
+
+          <section class="content-section" id="tech-section">
+            <div class="section-heading">
+              <p class="eyebrow">技术结构</p>
+              <h2>技术主链路</h2>
+            </div>
+
+            <p class="section-intro">
+              当前系统采用“前端静态页面 + 云端 Python 后端 + 本地知识增强 + Coze 能力补充”的混合架构。
+              线上版本已成功构建为一个可直接访问的完整问答链路。
+            </p>
+
+            <div class="flow-panel">
+              <div class="flow-track" aria-label="系统流程">
+                <article class="flow-step-card">
+                  <span class="flow-index">01</span>
+                  <strong>前端静态页面</strong>
+                  <p>负责聊天界面、输入框、快捷提问、Markdown 渲染、附件上传和新对话重置。</p>
+                </article>
+                <article class="flow-step-card">
+                  <span class="flow-index">02</span>
+                  <strong>云端 Python 后端</strong>
+                  <p>对前端提供 OpenAI 兼容风格接口，承接聊天、附件提字和健康检查请求。</p>
+                </article>
+                <article class="flow-step-card">
+                  <span class="flow-index">03</span>
+                  <strong>本地知识增强</strong>
+                  <p>基于本地知识库优先完成资料加载、检索和摘要，提升校园场景贴合度。</p>
+                </article>
+                <article class="flow-step-card">
+                  <span class="flow-index">04</span>
+                  <strong>Coze 能力补充</strong>
+                  <p>在本地知识基础上补充外部生成能力，形成最终的问答输出结果。</p>
+                </article>
+              </div>
+            </div>
+
+            <div class="stack-grid">
+              <article class="stack-card">
+                <span class="stack-label">前端</span>
+                <strong>独立静态 Web 页面</strong>
+                <p>负责聊天 UI、快捷提问、附件上传、打字机输出与 Markdown 渲染。</p>
+              </article>
+
+              <article class="stack-card">
+                <span class="stack-label">后端接口</span>
+                <strong>Python 后端接口服务</strong>
+                <p>负责承接前端对话请求、附件文字提取和基础健康检查等核心接口能力。</p>
+              </article>
+
+              <article class="stack-card">
+                <span class="stack-label">知识库</span>
+                <strong>raw / curated / templates 分层管理</strong>
+                <p>知识资料覆盖新生问答、校园资源、事务流程、学习指导、竞赛与学院专业公开资料。</p>
+              </article>
+
+              <article class="stack-card">
+                <span class="stack-label">部署运维</span>
+                <strong>云端部署与基础运维</strong>
+                <p>当前版本部署在云服务器上，由 Nginx、systemd 和 HTTPS 共同支撑线上访问、进程常驻和基础安全能力。</p>
+              </article>
+
+              <article class="stack-card">
+                <span class="stack-label">工程保障</span>
+                <strong>Smoke Tests + GitHub Actions</strong>
+                <p>已覆盖健康检查、聊天返回结构、附件提字接口以及知识加载与检索等基础能力。</p>
+              </article>
+            </div>
+          </section>
+
+          <section class="content-section" id="status-section">
+            <div class="section-heading">
+              <p class="eyebrow">当前状态</p>
+              <h2>当前完成情况</h2>
+            </div>
+
+            <div class="feature-grid status-grid">
+              <article class="feature-card status-card">
+                <span class="card-kicker">已完成</span>
+                <h3>云端首发上线</h3>
+                <p>
+                  已完成一次云端部署，用户可直接访问前端页面并使用核心问答功能
+                </p>
+              </article>
+
+              <article class="feature-card status-card">
+                <span class="card-kicker">已完成</span>
+                <h3>完整问答闭环</h3>
+                <p>
+                  前端、后端、知识增强和 Coze 能力补充已经完成联调，形成可访问、可演示的主链路
+                </p>
+              </article>
+
+              <article class="feature-card status-card">
+                <span class="card-kicker">已完成</span>
+                <h3>附件文字处理</h3>
+                <p>
+                  当前线上版本已经支持文档类附件提字，并支持围绕附件文字内容继续发起问答
+                </p>
+              </article>
+
+              <article class="feature-card status-card">
+                <span class="card-kicker">已完成</span>
+                <h3>部署与安全收口</h3>
+                <p>
+                  已完成 Nginx、systemd、HTTPS、服务器端环境变量保存和本机监听等基础安全与运维收口
+                </p>
+              </article>
+
+              <article class="feature-card status-card">
+                <span class="card-kicker">已完成</span>
+                <h3>基础工程化能力</h3>
+                <p>
+                  仓库已补充维护测 与 GitHub Actions 持续集成，不再只是“能跑起来的原型工程”
+                </p>
+              </article>
+
+              <article class="feature-card status-card">
+                <span class="card-kicker">边界说明</span>
+                <h3>当前适用范围</h3>
+                <p>
+                  项目已具备稳定演示能力，但尚不是长期公网开放的成熟商业系统；
+                  年份敏感信息仍应以学校和学院当年最新通知为准。
+                </p>
+              </article>
+            </div>
+          </section>
+
+          <section class="content-section" id="demo-section">
+            <div class="section-heading">
+              <p class="eyebrow">Demo / 使用示例</p>
+              <h2>在线版本与演示说明</h2>
+            </div>
+
+            <div class="demo-spotlight">
+              <div class="demo-highlight">
+                <span class="demo-kicker">展示重点</span>
+                <strong>当前页面展示已上线版本的使用流程</strong>
+                <p>
+                  演示视频对应的是当前已完成云端首发的问答链路。
+                  页面内可以直接播放录屏，也可以结合计划书一起查看整体设计和实现思路。
+                </p>
+              </div>
+
+              <div class="demo-shortcuts">
+                <a class="demo-shortcut" href="#status-section">当前状态</a>
+                <a class="demo-shortcut" href="#tech-section">技术链路</a>
+                <a
+                  class="demo-shortcut"
+                  href="./demo.mp4"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  打开视频文件
+                </a>
+                <a
+                  class="demo-shortcut"
+                  href="./project-proposal.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  打开计划书
+                </a>
+              </div>
+            </div>
+
+            <div class="review-layout">
+              <div class="video-panel">
+                <div class="demo-media-head">
+                  <span class="demo-media-label">演示视频</span>
+                  <p>当前线上首发版本对应的使用录屏，可直接在页面内播放。</p>
+                </div>
+                <video
+                  class="demo-video"
+                  controls
+                  playsinline
+                  preload="metadata"
+                  poster="../../images/XDU-Freshmen-Assistant.png"
+                >
+                  <source src="./demo.mp4" type="video/mp4" />
+                  当前浏览器不支持 video 标签。
+                </video>
+              </div>
+
+              <aside class="side-panel">
+                <div class="side-block">
+                  <h3>在线访问信息</h3>
+                  <ul class="example-list">
+                    <li>访问地址：<code>chat.xduassistant.cloud</code></li>
+                  </ul>
+                </div>
+
+                <div class="side-block">
+                  <h3>典型使用示例</h3>
+                  <ul class="example-list">
+                    <li>大一新生应该如何理解培养方案并安排第一学期学习重点？</li>
+                    <li>有哪些竞赛适合刚入学时开始了解和准备？</li>
+                    <li>图书馆、教务、请销假和奖助相关信息应该分别从哪里查找？</li>
+                    <li>上传一份课程说明或通知文档后，能否继续围绕附件内容提问？</li>
+                  </ul>
+                </div>
+
+                <div class="action-row">
+                  <a
+                    class="hero-action hero-action-primary"
+                    href="./demo.mp4"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    单独打开视频
+                  </a>
+                  <a
+                    class="hero-action"
+                    href="./project-proposal.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    查看计划书
+                  </a>
+                </div>
+              </aside>
+            </div>
+          </section>
+
+          <section class="content-section" id="future-section">
+            <div class="section-heading">
+              <p class="eyebrow">后续计划</p>
+              <h2>后续优化计划</h2>
+            </div>
+
+            <ul class="roadmap-grid">
+              <li class="roadmap-item">
+                继续补充年份敏感信息的核验与更新机制，降低政策、奖助和规则变动带来的回答漂移。
+              </li>
+              <li class="roadmap-item">
+                将当前知识库进一步结构化，持续增强检索、摘要和引用链路的稳定性。
+              </li>
+              <li class="roadmap-item">
+                在现有附件提字基础上，继续评估 OCR、扫描件识别和更完整的多模态增强方案。
+              </li>
+              <li class="roadmap-item">
+                补充更完善的公网运行保障能力，例如更细的日志监控、限流与长期运维方案。
+              </li>
+              <li class="roadmap-item">
+                在保留当前轻量线上链路的同时，逐步恢复和扩展更完整的 Agent 工程主线。
+              </li>
+            </ul>
+          </section>
+        </main>
+
+        <footer class="page-footer">
+          <div class="footer-copy">
+            <strong>西电新生学习导航智能助手</strong>
+            <span>Zhijun Zhang, Jingyuan Yue, Kai Lin</span>
+            <span>2026 西电星火杯智能体开发专项赛参赛项目</span>
+          </div>
+
+          <div class="footer-links">
+            <a href="#demo-section">跳转 Demo</a>
+            <a href="../../index.html">返回主页</a>
+          </div>
+        </footer>
+      </div>
+    </div>
+  </body>
+</html>

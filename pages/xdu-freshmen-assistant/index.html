@@ -1,20 +1,27 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="Project page for XDU Freshmen Assistant, a local intelligent navigation assistant for Xidian University freshmen."
+      content="Project page for XDU Freshmen Assistant, a campus QA project for first-year students at Xidian University."
     />
     <title>XDU Freshmen Assistant | Project Page</title>
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
     <div class="page-shell">
-      <div class="app-frame">
+      <nav class="language-rail" aria-label="Language switch">
+        <a class="language-switch is-active" href="./index.html" aria-current="page">
+          English
+        </a>
+        <a class="language-switch" href="./index-zh.html">中文</a>
+      </nav>
+
+      <div class="page-content">
         <header class="topbar">
-          <a class="back-link" href="../../index.html">Back to Homepage</a>
+          <a class="top-link" href="../../index.html">Back to Homepage</a>
 
           <a class="brand" href="#top" aria-label="XDU Freshmen Assistant">
             <img
@@ -27,215 +34,344 @@
               <strong class="brand-title">XDU Freshmen Assistant</strong>
             </div>
           </a>
-
-          <a
-            class="code-link"
-            href="https://github.com/KyrieZhang329/XDU-FreshmenAssistant"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            View Code
-          </a>
         </header>
 
-        <main class="workspace" id="top">
-          <section class="hero-showcase" aria-label="Project cover image">
-            <img
-              class="hero-showcase-image"
-              src="../../images/XDU-Freshmen-Assistant.png"
-              alt="XDU Freshmen Assistant preview"
-            />
-          </section>
-
-          <section class="hero-grid">
+        <main class="page-main" id="top">
+          <section class="hero-section">
             <div class="hero-copy">
-              <p class="hero-kicker">Spark Cup 2026 | Intelligent Agent Track</p>
-              <h1 class="hero-title">&#35199;&#30005;&#26032;&#29983;&#23398;&#20064;&#23548;&#33322;&#26234;&#33021;&#20307;</h1>
+              <p class="eyebrow">Entry for the 2026 XDU Spark Cup Agent Development Competition</p>
+              <h1 class="hero-title">XDU Freshmen Assistant</h1>
               <p class="hero-subtitle">
-                XDU-FreshmenAssistant is a locally deployable intelligent Q&amp;A
-                assistant designed for Xidian University freshmen. It focuses on
-                onboarding, course planning, campus resources, competition
-                guidance, and the practical questions that appear in the first
-                semester.
+                A campus QA project for first-year students at Xidian University
+              </p>
+              <p class="hero-text">
+                The project has completed local prototyping and launched an initial cloud release.
+                Users now only need to open a single web page in the browser to access campus Q&amp;A
+                and document-based questioning. The current scope focuses on onboarding, study planning,
+                competition entry, campus resources, and routine procedure guidance.
               </p>
 
+              <div class="hero-metrics" aria-label="Project overview">
+                <article class="hero-metric">
+                  <span class="hero-metric-label">Target Users</span>
+                  <strong>XDU freshmen</strong>
+                </article>
+                <article class="hero-metric">
+                  <span class="hero-metric-label">Release Status</span>
+                  <strong>Initial cloud version online</strong>
+                </article>
+                <article class="hero-metric">
+                  <span class="hero-metric-label">Current Capability</span>
+                  <strong>Text Q&amp;A + document text Q&amp;A</strong>
+                </article>
+              </div>
+
               <div class="hero-actions">
+                <a class="hero-action hero-action-primary" href="#demo-section">
+                  Watch Demo
+                </a>
+                <a class="hero-action" href="#status-section">Current Status</a>
                 <a
-                  class="hero-action hero-action-primary"
-                  href="https://github.com/KyrieZhang329/XDU-FreshmenAssistant"
+                  class="hero-action"
+                  href="./project-proposal.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  [Code]
+                  View Proposal
                 </a>
-                <a class="hero-action" href="./project-proposal.pdf" target="_blank" rel="noopener noreferrer">
-                  [Project Proposal PDF]
-                </a>
-                <a class="hero-action" href="#demo-video">[Demo Video]</a>
               </div>
             </div>
 
-            <aside class="summary-stack">
-              <article class="summary-card">
-                <span class="summary-label">Competition Context</span>
-                <strong>2026 XDU Spark Cup (Agent development track)</strong>
-              </article>
-              <article class="summary-card">
-                <span class="summary-label">Target Users</span>
-                <strong>Freshmen at Xidian University</strong>
-              </article>
-              <article class="summary-card">
-                <span class="summary-label">Deployment Form</span>
-                <strong>Local frontend + local backend + structured knowledge base</strong>
-              </article>
-            </aside>
+            <div class="hero-visual">
+              <div class="hero-image-frame">
+                <img
+                  class="hero-image"
+                  src="../../images/XDU-Freshmen-Assistant.png"
+                  alt="XDU Freshmen Assistant preview"
+                />
+              </div>
+
+              <div class="hero-facts">
+                <article class="hero-fact-card">
+                  <span>Frontend URL</span>
+                  <strong><code>chat.xduassistant.cloud</code></strong>
+                </article>
+                <article class="hero-fact-card">
+                  <span>Backend API</span>
+                  <strong><code>api.xduassistant.cloud</code></strong>
+                </article>
+              </div>
+            </div>
           </section>
 
-          <section class="section-panel">
-            <div class="section-head">
-              <p class="section-kicker">Project Positioning</p>
-              <h2>What this project solves</h2>
+          <section class="content-section">
+            <div class="section-heading">
+              <p class="eyebrow">Project Background</p>
+              <h2>Project Need</h2>
             </div>
+
+            <div class="background-grid">
+              <p class="section-text">
+                The project is designed for first-year students at Xidian University.
+                For freshmen, the core issue is not a total lack of information,
+                but the fact that campus information is scattered across department notices,
+                chat groups, academic affairs pages, experience posts, and loose documents.
+                Students often need to handle onboarding, study planning, competition entry,
+                resource access, and routine procedures at the same time, so a single dialogue-based entry point is needed.
+              </p>
+
+              <ul class="pain-grid">
+                <li>Information sources are scattered during onboarding, making it hard to decide what to read and do first</li>
+                <li>Training schemes, course plans, and study priorities are not easy to interpret at the beginning</li>
+                <li>Competition directions are numerous, yet freshmen still need clearer beginner-oriented guidance</li>
+                <li>Campus resources and routine procedures still require too much manual searching</li>
+              </ul>
+            </div>
+          </section>
+
+          <section class="content-section">
+            <div class="section-heading">
+              <p class="eyebrow">Functional Overview</p>
+              <h2>Core Functions</h2>
+            </div>
+
+            <p class="section-intro">
+              The current release is already online, and the frontend, backend, knowledge base,
+              and baseline engineering path have all been connected.
+            </p>
 
             <div class="feature-grid">
               <article class="feature-card">
-                <span class="feature-index">01</span>
-                <h3>Freshmen onboarding</h3>
+                <span class="card-kicker">Current module</span>
+                <h3>Text-based Q&amp;A</h3>
                 <p>
-                  Help new students quickly understand enrollment, courses,
-                  learning resources, organizations, and the first-stage campus
-                  workflow.
+                  Users can type questions directly in the browser, with current coverage focused on onboarding,
+                  study planning, competitions, campus resources, and routine procedures
                 </p>
               </article>
 
               <article class="feature-card">
-                <span class="feature-index">02</span>
-                <h3>Knowledge-guided answering</h3>
+                <span class="card-kicker">Current module</span>
+                <h3>Conversation Interaction</h3>
                 <p>
-                  Use a structured local knowledge base first, and only extend to
-                  web information when the question is time-sensitive or local
-                  material is insufficient.
+                  The interface supports new chat reset, quick prompt cards, and a more natural streaming-style output
+                  to reduce context carryover and improve the basic dialogue experience
                 </p>
               </article>
 
               <article class="feature-card">
-                <span class="feature-index">03</span>
-                <h3>Local runnable delivery</h3>
+                <span class="card-kicker">Current module</span>
+                <h3>Markdown Rendering</h3>
                 <p>
-                  The project is packaged as a locally runnable front-end and
-                  back-end system with one-click startup on Windows.
+                  The frontend correctly renders headings, lists, code blocks, and tables,
+                  making longer and more structured answers easier to read
+                </p>
+              </article>
+
+              <article class="feature-card">
+                <span class="card-kicker">Current module</span>
+                <h3>Document Text Q&amp;A</h3>
+                <p>
+                  The system accepts common document formats such as PDF, DOCX, XLSX, PPTX, and TXT,
+                  extracts their text, and supports follow-up questions about the uploaded content
+                </p>
+              </article>
+
+              <article class="feature-card">
+                <span class="card-kicker">Current module</span>
+                <h3>Knowledge-first Answering</h3>
+                <p>
+                  The backend follows a local-knowledge-first strategy:
+                  it retrieves and summarizes local materials first, then uses Coze capability as a supplement
+                </p>
+              </article>
+
+              <article class="feature-card">
+                <span class="card-kicker">Current module</span>
+                <h3>Source Type Hints</h3>
+                <p>
+                  Answers retain user-facing source hints, such as public library guidance notes.
                 </p>
               </article>
             </div>
           </section>
 
-          <section class="section-panel architecture-panel">
-            <div class="section-head">
-              <p class="section-kicker">System Structure</p>
-              <h2>How the project is organized</h2>
+          <section class="content-section" id="tech-section">
+            <div class="section-heading">
+              <p class="eyebrow">Technical Structure</p>
+              <h2>Main Technical Path</h2>
             </div>
 
-            <div class="architecture-grid">
-              <article class="architecture-card">
-                <h3>Frontend Layer</h3>
-                <p>
-                  A standalone web interface designed for local use. In the
-                  runnable version, it supports text interaction, thinking state,
-                  and progressive output.
-                </p>
-                <ul>
-                  <li>Local static frontend</li>
-                  <li>Separated deployment from backend</li>
-                  <li>Designed for direct use by freshmen</li>
-                </ul>
-              </article>
+            <p class="section-intro">
+              The current system uses a hybrid architecture:
+              static frontend page + cloud Python backend + local knowledge augmentation + Coze capability supplement.
+              The online version has already been built into a complete browser-accessible QA flow.
+            </p>
 
-              <article class="architecture-card">
-                <h3>Backend Layer</h3>
-                <p>
-                  A local backend exposing an OpenAI-compatible endpoint,
-                  primarily via <code>/v1/chat/completions</code>, with CORS
-                  support for front-end/back-end separation.
-                </p>
-                <ul>
-                  <li>Local health check and service entry</li>
-                  <li>Windows-oriented startup scripts</li>
-                  <li>Easy integration with agent backends</li>
-                </ul>
-              </article>
-
-              <article class="architecture-card">
-                <h3>Knowledge Layer</h3>
-                <p>
-                  Standardized knowledge directories separate raw material,
-                  curated content, templates, processed data, and indexes for
-                  later retrieval iteration.
-                </p>
-                <ul>
-                  <li><code>raw</code> source documents</li>
-                  <li><code>curated</code> cleaned knowledge</li>
-                  <li><code>templates</code> and indexes for processing</li>
-                </ul>
-              </article>
-            </div>
-          </section>
-
-          <section class="section-panel delivery-panel">
-            <div class="section-head">
-              <p class="section-kicker">Current Delivery</p>
-              <h2>Implemented highlights from the repository</h2>
+            <div class="flow-panel">
+              <div class="flow-track" aria-label="System flow">
+                <article class="flow-step-card">
+                  <span class="flow-index">01</span>
+                  <strong>Static Frontend Page</strong>
+                  <p>Handles the chat interface, input area, quick prompts, Markdown rendering, attachment upload, and chat reset.</p>
+                </article>
+                <article class="flow-step-card">
+                  <span class="flow-index">02</span>
+                  <strong>Cloud Python Backend</strong>
+                  <p>Provides OpenAI-compatible endpoints for chat, attachment text extraction, and service health checks.</p>
+                </article>
+                <article class="flow-step-card">
+                  <span class="flow-index">03</span>
+                  <strong>Local Knowledge Augmentation</strong>
+                  <p>Loads, retrieves, and summarizes locally curated campus materials before final response generation.</p>
+                </article>
+                <article class="flow-step-card">
+                  <span class="flow-index">04</span>
+                  <strong>Coze Capability Supplement</strong>
+                  <p>Supplies the external generation layer after local knowledge has already provided the primary grounding.</p>
+                </article>
+              </div>
             </div>
 
-            <div class="chip-row">
-              <span class="chip">One-click startup</span>
-              <span class="chip">Windows local deployment</span>
-              <span class="chip">Hybrid retrieval strategy</span>
-              <span class="chip">OpenAI-compatible API</span>
-              <span class="chip">Knowledge-base-first answering</span>
-              <span class="chip">Static resource serving</span>
-            </div>
-
-            <div class="detail-grid">
-              <article class="detail-card">
-                <h3>Run mode</h3>
-                <p>
-                  The repository provides a directly runnable local chat system,
-                  including frontend pages, a local backend, and startup scripts
-                  for Windows.
-                </p>
+            <div class="stack-grid">
+              <article class="stack-card">
+                <span class="stack-label">Frontend</span>
+                <strong>Independent static web page</strong>
+                <p>Used for chat UI, quick prompts, attachment upload, streaming output, and Markdown rendering.</p>
               </article>
 
-              <article class="detail-card">
-                <h3>Interaction strategy</h3>
-                <p>
-                  The practical chain prioritizes local knowledge. If the problem
-                  involves strong timeliness or the local material is not enough,
-                  the system can supplement through external information.
-                </p>
+              <article class="stack-card">
+                <span class="stack-label">Backend API</span>
+                <strong>Python backend service</strong>
+                <p>Handles the main chat requests, document text extraction, and baseline service health checks for the frontend.</p>
               </article>
 
-              <article class="detail-card">
-                <h3>Project assets</h3>
-                <p>
-                  This page includes the project proposal PDF and a demo video so
-                  the project can be reviewed without running the actual local
-                  system.
-                </p>
+              <article class="stack-card">
+                <span class="stack-label">Knowledge Base</span>
+                <strong>raw / curated / templates layering</strong>
+                <p>The knowledge base covers freshman Q&amp;A, campus resources, procedures, study guidance, competitions, and public program information.</p>
+              </article>
+
+              <article class="stack-card">
+                <span class="stack-label">Deployment &amp; Ops</span>
+                <strong>Cloud deployment and baseline operations</strong>
+                <p>The online release runs on a cloud server, with Nginx, systemd, and HTTPS covering public access, process uptime, and basic security.</p>
+              </article>
+
+              <article class="stack-card">
+                <span class="stack-label">Engineering</span>
+                <strong>Smoke tests + GitHub Actions</strong>
+                <p>Baseline checks already cover health, chat response shape, attachment extraction, and knowledge loading and retrieval.</p>
               </article>
             </div>
           </section>
 
-          <section class="section-panel media-panel" id="demo-video">
-            <div class="section-head">
-              <p class="section-kicker">Visual Demo</p>
-              <h2>Project demonstration video</h2>
+          <section class="content-section" id="status-section">
+            <div class="section-heading">
+              <p class="eyebrow">Current Status</p>
+              <h2>Current Delivery Status</h2>
             </div>
 
-            <div class="media-grid">
-              <div class="video-card">
+            <div class="feature-grid status-grid">
+              <article class="feature-card status-card">
+                <span class="card-kicker">Completed</span>
+                <h3>Initial Cloud Release</h3>
+                <p>
+                  The project has completed a cloud deployment, and users can directly access the frontend and use the core QA functions
+                </p>
+              </article>
+
+              <article class="feature-card status-card">
+                <span class="card-kicker">Completed</span>
+                <h3>End-to-end QA Flow</h3>
+                <p>
+                  Frontend, backend, local knowledge support, and Coze capability supplement have been integrated into one usable path
+                </p>
+              </article>
+
+              <article class="feature-card status-card">
+                <span class="card-kicker">Completed</span>
+                <h3>Document Text Handling</h3>
+                <p>
+                  The online version already supports document text extraction and follow-up questioning over the extracted content
+                </p>
+              </article>
+
+              <article class="feature-card status-card">
+                <span class="card-kicker">Completed</span>
+                <h3>Deployment and Security Baseline</h3>
+                <p>
+                  Nginx, systemd, HTTPS, server-side environment variables, and localhost-only backend listening have all been set in place
+                </p>
+              </article>
+
+              <article class="feature-card status-card">
+                <span class="card-kicker">Completed</span>
+                <h3>Baseline Engineering Support</h3>
+                <p>
+                  The repository already includes baseline tests and GitHub Actions CI, so the project is beyond a bare runnable prototype
+                </p>
+              </article>
+
+              <article class="feature-card status-card">
+                <span class="card-kicker">Scope Boundary</span>
+                <h3>Current Positioning</h3>
+                <p>
+                  The project is stable enough for demonstration and online access, but it is not yet positioned as a long-term public commercial system;
+                  time-sensitive information should still follow the latest official notices from the university and departments.
+                </p>
+              </article>
+            </div>
+          </section>
+
+          <section class="content-section" id="demo-section">
+            <div class="section-heading">
+              <p class="eyebrow">Demo / Usage</p>
+              <h2>Online Version Demonstration</h2>
+            </div>
+
+            <div class="demo-spotlight">
+              <div class="demo-highlight">
+                <span class="demo-kicker">Showcase Focus</span>
+                <strong>Demonstration of the current cloud release</strong>
+                <p>
+                  The video corresponds to the current browser-accessible release path.
+                  It can be played directly on this page and viewed together with the proposal as supporting context.
+                </p>
+              </div>
+
+              <div class="demo-shortcuts">
+                <a class="demo-shortcut" href="#status-section">Current Status</a>
+                <a class="demo-shortcut" href="#tech-section">Technical Path</a>
+                <a
+                  class="demo-shortcut"
+                  href="./demo.mp4"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Open Video File
+                </a>
+                <a
+                  class="demo-shortcut"
+                  href="./project-proposal.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Open Proposal
+                </a>
+              </div>
+            </div>
+
+            <div class="review-layout">
+              <div class="video-panel">
+                <div class="demo-media-head">
+                  <span class="demo-media-label">Demo Video</span>
+                  <p>Recorded usage flow corresponding to the current cloud release, playable directly on the page.</p>
+                </div>
                 <video
                   class="demo-video"
                   controls
+                  playsinline
                   preload="metadata"
                   poster="../../images/XDU-Freshmen-Assistant.png"
                 >
@@ -244,21 +380,84 @@
                 </video>
               </div>
 
-              <aside class="media-note">
-                <h3>How to review</h3>
-                <p>
-                  This page is intentionally presentation-only. It does not expose
-                  the live chat interface. Use the video to review the interaction
-                  flow and use the code repository for implementation details.
-                </p>
-                <div class="media-actions">
-                  <a class="hero-action" href="./demo.mp4" target="_blank" rel="noopener noreferrer">[Open Video]</a>
-                  <a class="hero-action" href="./project-proposal.pdf" target="_blank" rel="noopener noreferrer">[Open Proposal]</a>
+              <aside class="side-panel">
+                <div class="side-block">
+                  <h3>Online Access</h3>
+                  <ul class="example-list">
+                    <li>Access URL: <code>chat.xduassistant.cloud</code></li>
+                  </ul>
+                </div>
+
+                <div class="side-block">
+                  <h3>Typical Usage</h3>
+                  <ul class="example-list">
+                    <li>How should a freshman interpret the training scheme and plan the first semester?</li>
+                    <li>Which competitions are suitable for students who are just getting started?</li>
+                    <li>Where should users check library, academic affairs, leave, and scholarship information?</li>
+                    <li>After uploading a course notice or schedule, can the user continue asking questions about that document?</li>
+                  </ul>
+                </div>
+
+                <div class="action-row">
+                  <a
+                    class="hero-action hero-action-primary"
+                    href="./demo.mp4"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Open Video
+                  </a>
+                  <a
+                    class="hero-action"
+                    href="./project-proposal.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    View Proposal
+                  </a>
                 </div>
               </aside>
             </div>
           </section>
+
+          <section class="content-section" id="future-section">
+            <div class="section-heading">
+              <p class="eyebrow">Future Work</p>
+              <h2>Planned Improvements</h2>
+            </div>
+
+            <ul class="roadmap-grid">
+              <li class="roadmap-item">
+                Add stronger annual verification and refresh mechanisms for time-sensitive policy and scholarship information.
+              </li>
+              <li class="roadmap-item">
+                Continue structuring the knowledge base and strengthen retrieval, summarization, and citation stability.
+              </li>
+              <li class="roadmap-item">
+                Evaluate OCR, scanned-document support, and broader multimodal enhancement beyond the current text-only attachment path.
+              </li>
+              <li class="roadmap-item">
+                Improve long-term public deployment support with better monitoring, traffic control, and operational visibility.
+              </li>
+              <li class="roadmap-item">
+                Keep the current lightweight online path stable while gradually extending the fuller agent-oriented engineering branch.
+              </li>
+            </ul>
+          </section>
         </main>
+
+        <footer class="page-footer">
+          <div class="footer-copy">
+            <strong>XDU Freshmen Assistant</strong>
+            <span>Zhijun Zhang, Jingyuan Yue, Kai Lin</span>
+            <span>2026 XDU Spark Cup Agent Development Competition entry</span>
+          </div>
+
+          <div class="footer-links">
+            <a href="#demo-section">Jump to Demo</a>
+            <a href="../../index.html">Back to Homepage</a>
+          </div>
+        </footer>
       </div>
     </div>
   </body>
