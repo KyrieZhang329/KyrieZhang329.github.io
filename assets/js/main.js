@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const topNav = document.querySelector('nav[style*="position: fixed"]');
+    const topNav = document.querySelector('.top-nav');
     const sectionLinks = document.querySelectorAll('.nav-bar a, .top-nav-link');
     const sections = document.querySelectorAll('.section');
     const backToTopButton = document.getElementById('backToTop');
@@ -104,9 +104,9 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-            backToTopButton.style.display = 'block';
+            backToTopButton.classList.add('is-visible');
         } else {
-            backToTopButton.style.display = 'none';
+            backToTopButton.classList.remove('is-visible');
         }
     }
 

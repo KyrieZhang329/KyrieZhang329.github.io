@@ -6,187 +6,145 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
-    <link
-      rel="preconnect"
-      href="https://fonts.googleapis.com"
-    />
-    <link
-      rel="preconnect"
-      href="https://fonts.gstatic.com"
-      crossorigin
-    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Source+Serif+4:wght@400;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500&family=Geist+Mono:wght@400;500&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&display=swap"
     />
     <link rel="icon" href="images/page.jpg" type="image/jpeg" />
     <link rel="shortcut icon" href="images/page.jpg" type="image/jpeg" />
     <link rel="apple-touch-icon" href="images/page.jpg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kyrie Zhang/Personal Homepage</title>
+    <title>Zhijun Zhang — Homepage</title>
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
   <body>
     <div class="loader" id="loader">
       <div class="loader-content">
         <div class="loader-spinner"></div>
-        <p style="margin-top: 20px; color: #2c3e50">Loading...</p>
+        <p class="loader-text">Loading</p>
       </div>
     </div>
 
-    <nav
-      style="
-        position: fixed;
-        top: 0;
-        width: 100%;
-        background: rgba(255, 255, 255, 0.9);
-        backdrop-filter: blur(10px);
-        z-index: 100;
-        padding: 10px 0;
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-      "
-    >
-      <div
-        style="
-          max-width: 1000px;
-          margin: 0 auto;
-          display: flex;
-          justify-content: center;
-          gap: 30px;
-          padding-left: 150px;
-        "
-      >
-        <a href="#" class="top-nav-link">Home</a>
-        <a href="#about" class="top-nav-link">About Me</a>
-        <a href="#education" class="top-nav-link">Education</a>
-        <a href="#experience" class="top-nav-link">Experience</a>
-        <a href="#publications" class="top-nav-link">Publications</a>
-        <a href="#projects" class="top-nav-link">Projects</a>
-        <a href="#reading-notes" class="top-nav-link">Reading Notes</a>
+    <nav class="top-nav">
+      <div class="top-nav-inner">
+        <a href="#" class="top-nav-mark">
+          Zhijun&nbsp;Zhang <em>· homepage</em>
+        </a>
+        <div class="top-nav-links">
+          <a href="#" class="top-nav-link">Home</a>
+          <a href="#about" class="top-nav-link">About Me</a>
+          <a href="#education" class="top-nav-link">Education</a>
+          <a href="#experience" class="top-nav-link">Experience</a>
+          <a href="#publications" class="top-nav-link">Publications</a>
+          <a href="#projects" class="top-nav-link">Projects</a>
+          <a href="#reading-notes" class="top-nav-link">Reading Notes</a>
+        </div>
       </div>
     </nav>
 
-    <div class="page-title">Zhijun Zhang | Homepage</div>
-
     <div class="container">
-      <div class="sidebar">
+      <aside class="sidebar">
         <div class="profile-card">
           <div class="profile-photo-wrap">
             <img src="images/avatar.png" alt="Kyrie Zhang" class="avatar" />
           </div>
 
-          <div class="profile-divider" aria-hidden="true"></div>
-
           <div class="profile-summary">
             <h1 class="name">Zhijun Zhang</h1>
 
             <div class="profile-name-row">
-              <div class="chinese-name">&#24352;&#26234;&#38055;</div>
-              <div class="nickname">zhnnky</div>
+              <span class="chinese-name">&#24352;&#26234;&#38055;</span>
+              <span class="nickname">zhnnky</span>
             </div>
-
-            <div class="profile-motto">Stalwart as the mount</div>
 
             <div class="profile-location">
               <i class="fas fa-location-dot" aria-hidden="true"></i>
               <span>Xi'an, China</span>
             </div>
-          </div>
 
-          <div class="contact-section">
-            <div class="contact-links">
-              <a
-                href="mailto:zhijunz@stu.xidian.edu.cn"
-                class="contact-link"
-                aria-label="Email"
-                title="Email"
-              >
-                <i class="fas fa-envelope"></i>
-              </a>
-              <a
-                href="https://github.com/KyrieZhang329"
-                class="contact-link"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Github"
-                title="Github"
-              >
-                <i class="fab fa-github"></i>
-              </a>
-              <a
-                href="https://www.xiaohongshu.com/user/profile/6472c9bb000000000f005657"
-                class="contact-link"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Rednote"
-                title="Rednote"
-              >
-                <img src="images/xiao-hong-shu.png" alt="Rednote" />
-              </a>
-              <a
-                href="https://www.zhihu.com/people/hao-yue-leng-qian-shan-19"
-                class="contact-link"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Zhihu"
-                title="Zhihu"
-              >
-                <img src="images/zhihu-logo.png" alt="Zhihu" />
-              </a>
-              <a
-                href="https://space.bilibili.com/1254025264/upload/opus"
-                class="contact-link"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Bilibili"
-                title="Bilibili"
-              >
-                <i class="fa-brands fa-bilibili"></i>
-              </a>
-            </div>
+            <p class="profile-motto">Stalwart as the mount.</p>
           </div>
         </div>
-      </div>
+
+        <div class="contact-section">
+          <div class="contact-links">
+            <a
+              href="mailto:zhijunz@stu.xidian.edu.cn"
+              aria-label="Email"
+              title="Email"
+            >
+              <i class="fas fa-envelope"></i>
+            </a>
+            <a
+              href="https://github.com/KyrieZhang329"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Github"
+              title="Github"
+            >
+              <i class="fab fa-github"></i>
+            </a>
+            <a
+              href="https://www.xiaohongshu.com/user/profile/6472c9bb000000000f005657"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Rednote"
+              title="Rednote"
+            >
+              <span class="contact-wordmark">小红书</span>
+            </a>
+            <a
+              href="https://www.zhihu.com/people/hao-yue-leng-qian-shan-19"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Zhihu"
+              title="Zhihu"
+            >
+              <img src="images/zhihu-logo.png" alt="Zhihu" />
+            </a>
+            <a
+              href="https://space.bilibili.com/1254025264/upload/opus"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Bilibili"
+              title="Bilibili"
+            >
+              <i class="fa-brands fa-bilibili"></i>
+            </a>
+          </div>
+        </div>
+      </aside>
 
       <div class="main-content-wrapper">
         <main class="main-content">
-          <nav class="nav-bar">
-            <a href="#about" class="active">About Me</a>
-            <a href="#education">Education</a>
-            <a href="#experience">Experience</a>
-            <a href="#publications">Publications</a>
-            <a href="#projects">Projects</a>
-            <a href="#reading-notes">Reading Notes</a>
-          </nav>
-
           <section class="section" id="about">
-            <h2 class="section-title">About Me</h2>
+            <h2 class="section-title" data-num="01">About Me</h2>
             <div class="about-content">
               <p>
-                I am an undergraduate student at Xidian University(2025-2029),
-                majoring in Computer Science(intelligence).
-              </p>
-              <p>
-                I am also a member of the XDU
+                I'm an undergraduate at Xidian University (2025–2029),
+                majoring in Computer Science (Intelligence) and serving as a
+                member of the XDU
                 <a
                   href="https://space.bilibili.com/436391821?spm_id_from=333.1387.follow.user_card.click"
                   target="_blank"
                   rel="noopener noreferrer"
                   >IRobot (RoboMaster)</a
                 >
-                Algorithm Team.
+                Algorithm Team. I'm currently exploring Robotics —
+                autonomous perception and planning for
+                aerial robots in particular.
               </p>
               <p>
-                Currently I'm exploring Robotics, with an interest in
-                autonomous planning, perception, and decision-making for aerial
-                robots.
+                Feel free to reach out to me —
+                <em>zhijunz@stu.xidian.edu.cn</em>
               </p>
-              <p>Feel free to reach out to me! (Email: <em>zhijunz@stu.xidian.edu.cn</em>)</p>
             </div>
           </section>
 
           <section class="section" id="education">
-            <h2 class="section-title">Education</h2>
+            <h2 class="section-title" data-num="02">Education</h2>
 
             <div class="education-list">
               <div class="education-item">
@@ -194,14 +152,6 @@
                   src="images/xdu-logo.png"
                   alt="XDU Logo"
                   class="education-logo"
-                  style="
-                    width: 50px;
-                    height: 50px;
-                    border-radius: 6px;
-                    object-fit: cover;
-                    flex-shrink: 0;
-                    display: block;
-                  "
                 />
                 <div class="education-content">
                   <h3 class="education-title">Undergraduate</h3>
@@ -222,14 +172,6 @@
                   src="images/hsas-logo.png"
                   alt="HSAS Logo"
                   class="education-logo"
-                  style="
-                    width: 50px;
-                    height: 50px;
-                    border-radius: 6px;
-                    object-fit: cover;
-                    flex-shrink: 0;
-                    display: block;
-                  "
                 />
                 <div class="education-content">
                   <h3 class="education-title">High school student</h3>
@@ -238,7 +180,7 @@
                       href="https://www.hsas.edu.cn/#/"
                       target="_blank"
                       rel="noopener noreferrer"
-                      >The High School Affliated to SUSTech</a
+                      >The High School Affiliated to SUSTech</a
                     >
                   </div>
                   <span class="education-date">2022.9 - 2025.6</span>
@@ -249,7 +191,7 @@
           </section>
 
           <section class="section" id="experience">
-            <h2 class="section-title">Experience</h2>
+            <h2 class="section-title" data-num="03">Experience</h2>
 
             <div class="experience-list">
               <div class="experience-item">
@@ -270,10 +212,12 @@
                     >
                   </h3>
                   <div class="experience-org">
-                    Xidian University, Xi'an <span class="experience-date">2025.12 - now</span>
+                    Xidian University, Xi'an
+                    <span class="experience-date">2025.12 - now</span>
                   </div>
                   <div class="experience-desc">
-                    Algorithm team member, with works focused on robot localization and navigation.
+                    Algorithm team member, with works focused on robot
+                    localization and navigation.
                   </div>
                 </div>
               </div>
@@ -281,28 +225,28 @@
           </section>
 
           <section class="section" id="publications">
-            <h2 class="section-title">Publications</h2>
+            <h2 class="section-title" data-num="04">Publications</h2>
             <div class="publications-content">
               <p>No formal publications yet.</p>
             </div>
           </section>
 
           <section class="section" id="projects">
-            <h2 class="section-title">Projects</h2>
+            <h2 class="section-title" data-num="05">Projects</h2>
 
             <div class="projects-list">
               <article class="project-item">
                 <div class="project-demo">
-                  <img src="images/MARL-HeteroUAVs.png" alt="Project Demo" />
+                  <img src="images/MARL-HeteroUAVs.png" alt="MARL-HeteroUAVs" />
                 </div>
 
                 <div class="project-content">
                   <h3 class="project-title">MARL-HeteroUAVs</h3>
                   <p class="project-desc">
-                    An Undergraduate Innovation Training Program project on cooperative perception and
-                    path planning for heterogeneous UAVs based on MARL.
+                    An Undergraduate Innovation Training Program project on
+                    cooperative perception and path planning for heterogeneous
+                    UAVs based on MARL.
                   </p>
-
                   <p class="project-members">
                     <strong>Zhijun Zhang</strong>, Zhe Xu, Yimeng Guo,
                     <a
@@ -312,7 +256,6 @@
                       >Qingyang Li (Advisor)</a
                     >
                   </p>
-
                   <div class="project-links">
                     <a
                       href="https://github.com/KyrieZhang329/MARL-HeteroUAVs/tree/main"
@@ -328,7 +271,7 @@
                 <div class="project-demo">
                   <img
                     src="images/XDU-Freshmen-Assistant.png"
-                    alt="Project Demo"
+                    alt="XDU-Freshmen-Assistant"
                   />
                 </div>
 
@@ -336,10 +279,9 @@
                   <h3 class="project-title">XDU-Freshmen-Assistant</h3>
                   <p class="project-desc">
                     An intelligent campus assistant for freshmen at Xidian
-                    University, developed for the 2026 XDU Spark Cup Intelligent
-                    Agent Special Track.
+                    University, developed for the 2026 XDU Spark Cup
+                    Intelligent Agent Special Track.
                   </p>
-
                   <p class="project-members">
                     <strong>Zhijun Zhang</strong>, Jingyuan Yue, Kai Lin,
                     <a
@@ -349,7 +291,6 @@
                       >Xu Zhang (Advisor)</a
                     >
                   </p>
-
                   <div class="project-links">
                     <a
                       href="https://github.com/KyrieZhang329/XDU-FreshmenAssistant"
@@ -370,7 +311,7 @@
           </section>
 
           <section class="section" id="reading-notes">
-            <h2 class="section-title">Reading Notes</h2>
+            <h2 class="section-title" data-num="06">Reading Notes</h2>
 
             <div class="reading-notes-intro">
               <p>
@@ -381,6 +322,7 @@
 
             <ul class="reading-notes-list">
               <li class="reading-note-item">
+                <span class="reading-note-num">№01</span>
                 <div class="reading-note-main">
                   <span class="reading-note-title">
                     <a
@@ -396,36 +338,13 @@
               </li>
             </ul>
           </section>
-          <div class="update-time">
-            <p>Last updated: March 22, 2026</p>
-          </div>
+
+          <div class="update-time">Last updated · March 22, 2026</div>
         </main>
       </div>
     </div>
 
-    <button
-      id="backToTop"
-      style="
-        display: none;
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        z-index: 99;
-        font-size: 18px;
-        border: none;
-        outline: none;
-        background-color: #3498db;
-        color: white;
-        cursor: pointer;
-        padding: 15px;
-        border-radius: 50%;
-        width: 50px;
-        height: 50px;
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-      "
-    >
-      &uarr;
-    </button>
+    <button id="backToTop" aria-label="Back to top">↑</button>
 
     <script src="assets/js/main.js"></script>
   </body>

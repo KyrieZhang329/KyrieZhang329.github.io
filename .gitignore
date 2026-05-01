@@ -1,1 +1,5 @@
 .DS_Store
+
+# Local AI assistant working directories
+.claude/
+.codex/
